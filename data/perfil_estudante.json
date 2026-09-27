@@ -1,0 +1,20 @@
+{
+  "nome": "Lucas Martins",
+  "idade": 26,
+  "profissao_atual": "Assistente Administrativo",
+  "transicao_carreira": true,
+  "nivel_atual": "iniciante",
+  "horas_disponiveis_semana": 8,
+  "objetivo_principal": "Conseguir primeira oportunidade júnior em Backend",
+  "preferencia_aprendizado": "Projetos práticos e passo a passo",
+  "metas": [
+    {
+      "meta": "Aprender fundamentos de lógica e sintaxe básica",
+      "prazo": "2026-10"
+    },
+    {
+      "meta": "Construir primeira API REST e publicar portfólio",
+      "prazo": "2026-12"
+    }
+  ]
+}

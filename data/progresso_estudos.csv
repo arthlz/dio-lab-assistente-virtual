@@ -1,0 +1,9 @@
+data,atividade,modulo,horas_dedicadas,status
+2026-09-01,Instalação do Python e VS Code,Fundamentos,2.0,concluido
+2026-09-04,Variáveis e Tipos Primitivos,Fundamentos,2.5,concluido
+2026-09-08,Operadores Condicionais (if/else),Fundamentos,2.0,concluido
+2026-09-11,Exercícios práticos de lógica,Fundamentos,1.5,concluido
+2026-09-15,Estruturas de Repetição (for/while),Fundamentos,3.0,concluido
+2026-09-19,Listas e Dicionários,Estruturas,2.5,concluido
+2026-09-23,Funções e Modularização,Estruturas,2.0,concluido
+2026-09-26,Mini-projeto: Agenda em Terminal,Projetos,3.0,em_andamento

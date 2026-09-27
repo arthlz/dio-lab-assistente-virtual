@@ -1,0 +1,52 @@
+[
+  {
+    "nome": "Fundamentos de Lógica e Python",
+    "categoria": "backend",
+    "nivel": "iniciante",
+    "carga_horaria_semanal_sugerida": 5,
+    "duracao_estimada_semanas": 4,
+    "prerequisitos": "Nenhum",
+    "tecnologias": ["Lógica de Programação", "Python Básico", "Estruturas de Dados"],
+    "indicado_para": "Quem parte do zero absoluto e tem poucas horas semanais"
+  },
+  {
+    "nome": "Desenvolvimento Web Frontend com HTML, CSS e React",
+    "categoria": "frontend",
+    "nivel": "iniciante",
+    "carga_horaria_semanal_sugerida": 8,
+    "duracao_estimada_semanas": 6,
+    "prerequisitos": "Conhecimentos básicos de computador e navegação na internet",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript Moderno", "React"],
+    "indicado_para": "Quem prefere construir interfaces visuais e páginas interativas"
+  },
+  {
+    "nome": "Construção de APIs REST com FastAPI e Python",
+    "categoria": "backend",
+    "nivel": "intermediario",
+    "carga_horaria_semanal_sugerida": 8,
+    "duracao_estimada_semanas": 6,
+    "prerequisitos": "Fundamentos de Lógica e Python",
+    "tecnologias": ["FastAPI", "Pydantic", "SQLAlchemy", "SQLite / PostgreSQL"],
+    "indicado_para": "Quem já domina a base de Python e quer construir serviços web e integrações"
+  },
+  {
+    "nome": "Python para Análise de Dados e Manipulação com Pandas",
+    "categoria": "dados",
+    "nivel": "iniciante_a_intermediario",
+    "carga_horaria_semanal_sugerida": 6,
+    "duracao_estimada_semanas": 5,
+    "prerequisitos": "Fundamentos de Lógica e Python",
+    "tecnologias": ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebook"],
+    "indicado_para": "Quem quer explorar bases de dados, gerar relatórios e iniciar em Ciência de Dados"
+  },
+  {
+    "nome": "Arquitetura e Microsserviços em Nuvem",
+    "categoria": "cloud_devops",
+    "nivel": "avancado",
+    "carga_horaria_semanal_sugerida": 10,
+    "duracao_estimada_semanas": 8,
+    "prerequisitos": "Experiência prévia com desenvolvimento Backend e APIs REST",
+    "tecnologias": ["Docker", "Kubernetes", "AWS Básico", "CI/CD"],
+    "indicado_para": "Desenvolvedores experientes focados em escalabilidade e infraestrutura"
+  }
+]
