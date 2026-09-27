@@ -1,46 +1,40 @@
-# 🎓 Edu - Educador Financeiro Inteligente
+# 💻 DevGuide - Mentor de Estudos Inteligente
 
-> Agente de IA Generativa que ensina conceitos de finanças pessoais de forma simples e personalizada, usando os próprios dados do cliente como exemplos práticos.
+> Agente de IA Generativa que orienta a escolha de trilhas de aprendizagem e rotinas de estudo em tecnologia de forma simples e personalizada, usando os dados e objetivos reais do estudante como base prática.
 
-## 💡 O Que é o Edu?
+## 💡 O Que é o DevGuide?
 
-O Edu é um educador financeiro que **ensina**, não recomenda. Ele explica conceitos como reserva de emergência, tipos de investimentos e análise de gastos usando uma abordagem didática e exemplos concretos baseados no perfil do cliente.
+O DevGuide é um mentor virtual de tecnologia que **orienta e educa**, não sobrecarrega. Ele explica conteúdos programáticos, pré-requisitos e planeamento de rotinas de estudo com base no tempo semanal disponível e no histórico do estudante, combatendo a paralisia por excesso de informação.
 
-**O que o Edu faz:**
-- ✅ Explica conceitos financeiros de forma simples
-- ✅ Usa dados do cliente como exemplos práticos
-- ✅ Responde dúvidas sobre produtos financeiros
-- ✅ Analisa padrões de gastos de forma educativa
+**O que o DevGuide faz:**
+- ✅ Explica requisitos e conteúdos das trilhas de tecnologia de forma simples
+- ✅ Usa o perfil e a disponibilidade do estudante como base prática
+- ✅ Responde a dúvidas sobre ferramentas e linguagens cadastradas no catálogo
+- ✅ Analisa o progresso recente e recomenda o próximo passo de estudo
 
-**O que o Edu NÃO faz:**
-- ❌ Não recomenda investimentos específicos
-- ❌ Não acessa dados bancários sensíveis
-- ❌ Não substitui um profissional certificado
+**O que o DevGuide NÃO faz:**
+- ❌ Não inventa cursos, módulos ou certificados ausentes do catálogo
+- ❌ Não sobrecarrega iniciantes com jargões técnicos sem explicação
+- ❌ Não atua em temas alheios ao contexto de estudos e tecnologia
 
 ## 🏗️ Arquitetura
 
 ```mermaid
 flowchart TD
-    A[Usuário] --> B[Streamlit]
+    A[Utilizador] --> B[Streamlit]
     B --> C[Ollama - LLM Local]
     C --> D[Base de Conhecimento]
     D --> C
     C --> E[Resposta Educativa]
-```
 
-**Stack:**
-- Interface: Streamlit
-- LLM: Ollama (modelo local `gpt-oss`)
-- Dados: JSON/CSV mockados
 
-## 📁 Estrutura do Projeto
+## Estrutura do projeto
 
-```
 ├── data/                          # Base de conhecimento
-│   ├── perfil_investidor.json     # Perfil do cliente
-│   ├── transacoes.csv             # Histórico financeiro
-│   ├── historico_atendimento.csv  # Interações anteriores
-│   └── produtos_financeiros.json  # Produtos para ensino
+│   ├── perfil_estudante.json      # Perfil, objetivos e disponibilidade do aluno
+│   ├── progresso_estudos.csv      # Módulos e exercícios já concluídos
+│   ├── historico_duvidas.csv      # Interações e dúvidas técnicas anteriores
+│   └── trilhas_cursos.json        # Catálogo oficial de cursos e pré-requisitos
 │
 ├── docs/                          # Documentação completa
 │   ├── 01-documentacao-agente.md  # Caso de uso e persona
@@ -50,54 +44,33 @@ flowchart TD
 │   └── 05-pitch.md                # Apresentação do projeto
 │
 └── src/
-    └── app.py                     # Aplicação Streamlit
-```
+    └── app.py                     # Aplicação Streamlit    
 
-## 🚀 Como Executar
 
-### 1. Instalar Ollama
+## Como executar
 
 ```bash
-# Baixar em: ollama.com
-ollama pull gpt-oss
-ollama serve
+    # Descarregar em: ollama.com
+    ollama pull llama3
+    ollama serve
+
 ```
 
-### 2. Instalar Dependências
+```b
+    pip install streamlit pandas requests
+```
 
 ```bash
-pip install streamlit pandas requests
+    streamlit run src/app.py
 ```
 
-### 3. Rodar o Edu
+🎯 Exemplos de Uso
+Pergunta: "Tenho 8 horas livres por semana e quero começar do zero. O que devo estudar?"
 
-```bash
-streamlit run src/app.py
-```
+DevGuide: "Com base na sua disponibilidade de 8 horas semanais e foco inicial, a trilha recomendada é Fundamentos de Lógica e Python. Ela exige cerca de 5 horas por semana, permitindo que aprenda a sintaxe básica e resolva exercícios sem sobrecarga. Quer que eu apresente os tópicos da primeira semana ou prefere ver como configurar o VS Code?"
 
-## 🎯 Exemplo de Uso
+Pergunta: "Vocês têm um curso avançado de Rust para microsserviços?"
 
-**Pergunta:** "O que é CDI?"  
-**Edu:** "CDI é uma taxa de referência usada pelos bancos. Quando um investimento rende '100% do CDI', significa que ele acompanha essa taxa. Hoje o CDI está próximo da Selic. Quer que eu explique a diferença entre os dois?"
+DevGuide: "No momento, a nossa base não conta com uma trilha específica de Rust. Na área de backend e infraestrutura, temos disponíveis Construção de APIs REST com FastAPI e Python e Arquitetura e Microsserviços em Nuvem. Gostaria de conhecer os pré-requisitos de alguma destas opções?"
 
-**Pergunta:** "Onde estou gastando mais?"  
-**Edu:** "Olhando suas transações de outubro, sua maior despesa é moradia (R$ 1.380), seguida de alimentação (R$ 570). Juntas, representam quase 80% dos seus gastos. Isso é bem comum! Quer que eu explique algumas estratégias de organização?"
-
-## 📊 Métricas de Avaliação
-
-| Métrica | Objetivo |
-|---------|----------|
-| **Assertividade** | O agente responde o que foi perguntado? |
-| **Segurança** | Evita inventar informações (anti-alucinação)? |
-| **Coerência** | A resposta é adequada ao perfil do cliente? |
-
-## 🎬 Diferenciais
-
-- **Personalização:** Usa os dados do próprio cliente nos exemplos
-- **100% Local:** Roda com Ollama, sem enviar dados para APIs externas
-- **Educativo:** Foco em ensinar, não em vender produtos
-- **Seguro:** Estratégias de anti-alucinação documentadas
-
-## 📝 Documentação Completa
-
-Toda a documentação técnica, estratégias de prompt e casos de teste estão disponíveis na pasta [`docs/`](./docs/).
+Toda a documentação técnica, estratégias de prompt e casos de teste estão disponíveis na pasta docs/.
